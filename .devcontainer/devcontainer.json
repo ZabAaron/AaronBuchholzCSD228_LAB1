@@ -1,0 +1,35 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
+{
+	"name": "Debian 13 Slim - Flutter",
+	"build": {
+		// Sets the run context to one level up instead of the .devcontainer folder.
+		"context": "..",
+		// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
+		"dockerfile": "../Dockerfile",
+		"args": {
+			// Currently prevents:  qemu-x86_64: Could not open '/lib64/ld-linux-x86-64.so.2': No such file or directory
+			// 						on arm hosts
+			"platform": "linux/amd64"
+		}
+	},
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	 "forwardPorts": [
+		 // Expose the web dev server port: https://docs.flutter.dev/platform-integration/web/web-dev-config-file#basic-server-configuration.
+		 // This should be kept in sync with the ../web_dev_config.yaml file
+		 8080,
+	 ],
+
+	// Uncomment the next line to run commands after the container is created.
+	// "postCreateCommand": "cat /etc/os-release",
+	// "postCreateCommand": "flutter doctor",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "dev"
+}

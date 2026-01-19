@@ -1,0 +1,16 @@
+# https://github.com/marketplace/actions/labeler
+devcontainer:
+  - changed-files:
+    - any-glob-to-any-file: [ 'Dockerfile', '.devcontainer/**/*.json', 'web_dev_config.yaml' ]
+
+dart:
+  - changed-files:
+      - any-glob-to-any-file: [ '**/*.dart' ]
+
+lab:
+  - changed-files:
+      - any-glob-to-any-file: [ '**/Lectures/**/*.dart' ]
+
+assignment:
+  - changed-files:
+      - any-glob-to-any-file: [ '**/Assignments/**/*.dart' ]

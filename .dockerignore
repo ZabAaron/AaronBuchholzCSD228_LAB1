@@ -1,0 +1,9 @@
+Assignments/*
+!Assignments/solutions/**/*
+.github/
+Lectures
+Slides
+Tests
+W26
+W25
+*.xltx

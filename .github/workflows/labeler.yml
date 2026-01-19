@@ -1,0 +1,24 @@
+name: Labeler
+on:
+  pull_request:
+
+# Ensure that this workflow gets cancelled on changes.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+#https://github.com/marketplace/actions/labeler#example-workflow-permissions
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  labeler:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Labeler
+        uses: actions/labeler@v6.0.1
+        with:
+          sync-labels: 'true'

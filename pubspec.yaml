@@ -1,0 +1,34 @@
+# Mobile Programming with Flutter
+#
+# This course's scope is meant to teach Canadian College level students mobile development via the cross-platform
+# framework Flutter.
+name: _
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  equatable: ^2.0.7
+
+# Each of the workspaces act as an example.
+#
+# Each will contain basic examples that can be modified to practice utilizing Dart and Flutter.
+workspace:
+  - "Lectures/intro_to_dart"
+  - "Lectures/intro_to_flutter"
+  - "Lectures/navigation_in_flutter"
+  - "Lectures/flutter_bloc_pattern"
+  - "Assignments/assets/classifieds-api"
+  - "Assignments/assets/classifieds-client"
+  - "Assignments/assets/classifieds-server"
+
+# The following section is specific to Flutter packages and is required to be set at the primary pubspec.yaml to test
+# correctly using the following from the root of the workspace: `flutter test **/test` (doing this using the dart
+# command fails on all projects requiring Flutter).
+flutter:
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true

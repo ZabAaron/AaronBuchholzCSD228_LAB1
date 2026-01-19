@@ -1,0 +1,22 @@
+# Using data provided from updated answer found here: https://stackoverflow.com/a/9977954 to solve Windows compatibility
+# issues specifically around line feed endings.
+# Autodetect text files
+* text=auto
+
+# ...Unless the name matches the following
+# overriding patterns
+*.dart text
+*.y(a)?ml text
+*.md text
+*.base text
+*.sql text
+Dockerfile text
+Makefile text
+
+# Definitely not text
+*.jpeg binary
+*.png binary
+*.apk binary
+*.aarb binary
+*.exe binary
+*.db binary
