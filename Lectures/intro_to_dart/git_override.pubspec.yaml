@@ -1,0 +1,27 @@
+# The dart convention is to use lower_snake_case package names
+name: my_app
+description: |
+  Some description to inform users of what the library does.
+# Follows semver versioning of major.minor.patch.
+#
+# This could optionally container modifiers indicating build
+# revision or package type (e.g. dev).
+version: 0.0.1
+# Prevents publishing to the pub package server.
+publish_to: none
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  path: ^1.9.2
+
+dependency_overrides:
+  # If you have pushed up changes or are testing changes from a
+  # version control system platform.
+  path:
+    git:
+      # Using the branch name will use the head commit at the time of dependency resolution.
+      # To running `flutter pub get` may not update the
+      ref: branch-name-or-commit-id-here
+      url: git@github.com:example/path.git
