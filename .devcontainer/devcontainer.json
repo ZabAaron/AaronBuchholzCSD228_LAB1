@@ -22,14 +22,24 @@
 		 // This should be kept in sync with the ../web_dev_config.yaml file
 		 8080,
 	 ],
+	 
 
 	// Uncomment the next line to run commands after the container is created.
-	// "postCreateCommand": "cat /etc/os-release",
-	// "postCreateCommand": "flutter doctor",
+	 "postCreateCommand": "cat /etc/os-release",
+	 // "postCreateCommand": "flutter doctor",
+
 
 	// Configure tool-specific properties.
 	// "customizations": {},
 
 	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
-	"remoteUser": "dev"
+	"remoteUser": "dev",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Dart-Code.flutter",
+				"Dart-Code.dart-code"
+			]
+		}
+	}
 }
